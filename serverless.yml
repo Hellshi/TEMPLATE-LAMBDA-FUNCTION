@@ -7,6 +7,8 @@ provider:
 
 package:
   excludeDevDependencies: true
+  exclude:
+    - src/test
 
 plugins:
   - serverless-plugin-typescript
@@ -14,7 +16,7 @@ plugins:
 
 functions:
   function1:
-    handler: app/index.handler
+    handler: src/app/index.handler
     events:
       - http:
           path: split-payment
