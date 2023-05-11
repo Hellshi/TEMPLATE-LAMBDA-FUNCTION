@@ -1,4 +1,8 @@
-export default (userId, effect, resource) => {
+export default ({ effect, resource, userId="WISHLY.PAYMENT.API" }: {
+    userId?: string
+    effect: string
+    resource: string
+}) => {
     const policy = {
         principalId: userId,
         policyDocument: {

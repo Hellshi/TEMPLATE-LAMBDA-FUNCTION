@@ -9,14 +9,14 @@ export const handler: Handler = async (event) => {
     const token = event.authorizationToken;
 
     try {
-        jwt.verify(token, JWT_KEY!)
+        const { userId } = jwt.verify(token, JWT_KEY!) as jwt.JwtPayload
 
-        const policyDocument = buildIAMPolicy(
-            "WISHLY.API",
-            'Allow',
-            event.methodArn,
+        const policyDocument = buildIAMPolicy({
+            userId,
+            effect: 'Allow',
+            resource: event.methodArn,
             // You may add an context here later
-        )
+        })
         return policyDocument
 
     } catch(error) {
