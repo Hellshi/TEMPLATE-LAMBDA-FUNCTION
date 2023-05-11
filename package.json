@@ -16,6 +16,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "stripe": "^8.144.0"
+    "stripe": "^8.144.0",
+    "typeorm": "0.2.41"
   }
 }
