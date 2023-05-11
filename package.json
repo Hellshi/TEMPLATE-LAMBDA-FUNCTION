@@ -1,0 +1,18 @@
+{
+  "devDependencies": {
+    "nodemon": "^2.0.22",
+    "serverless-offline": "^12.0.4",
+    "serverless-plugin-typescript": "^2.1.4",
+    "typescript": "^5.0.4"
+  },
+  "name": "wishly-split-payment-lambda",
+  "description": "<-- I'm bored, so I'll move split payment to a lambda function and see what happens -->",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "local": "npx nodemon --exec sls offline start --host 0.0.0.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

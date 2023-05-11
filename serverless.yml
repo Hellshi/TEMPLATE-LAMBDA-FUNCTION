@@ -5,6 +5,15 @@ provider:
   name: aws
   runtime: nodejs18.x
 
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline
+
 functions:
   function1:
-    handler: index.handler
+    handler: app/index.handler
+    events:
+      - http:
+          path: split-payment
+          method: get
+          #private: true
