@@ -15,9 +15,22 @@ plugins:
   - serverless-offline
 
 functions:
-  function1:
+  authorizerFunc:
+    handler: src/auth/authorizer.handler
+
+  splitPayment:
     handler: src/app/index.handler
     events:
       - http:
           path: split-payment
           method: get
+          authorizer: authorizerFunc
+          cors:
+            origins:
+              - '*'
+            headers:
+              - Content-Type
+              - Authorization
+
+#    layers:  
+# TODO: add layers here at the end
