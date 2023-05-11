@@ -3,7 +3,10 @@ frameworkVersion: '3'
 
 provider:
   name: aws
-  runtime: nodejs18.x
+  runtime: nodejs16.x
+
+package:
+  excludeDevDependencies: true
 
 plugins:
   - serverless-plugin-typescript
@@ -16,4 +19,3 @@ functions:
       - http:
           path: split-payment
           method: get
-          #private: true
