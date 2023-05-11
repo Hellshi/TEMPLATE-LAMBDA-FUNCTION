@@ -63,10 +63,8 @@ describe('Auth', () => {
     })
 
     it("Should return 401 on expired token", async () => {
-        setTimeout(async () => {
-            const response = await handler({ authorizationToken: expiredToken, methodArn: "", type: "" }) as AwsResponse
-            expect(response.body).toBe(customResponses["UNAUTHORIZED"].body)
-            expect(response.statusCode).toBe(customResponses["UNAUTHORIZED"].statusCode)
-        }, 2000)
+        const response = await handler({ authorizationToken: expiredToken, methodArn: "", type: "" }) as AwsResponse
+        expect(response.body).toBe(customResponses["UNAUTHORIZED"].body)
+        expect(response.statusCode).toBe(customResponses["UNAUTHORIZED"].statusCode)
     })
 })
