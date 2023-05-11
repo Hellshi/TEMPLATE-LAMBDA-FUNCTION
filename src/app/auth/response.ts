@@ -1,0 +1,1 @@
+export type AwsResponse = { statusCode: number, body: any }

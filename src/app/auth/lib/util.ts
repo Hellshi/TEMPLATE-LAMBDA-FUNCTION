@@ -1,8 +1,21 @@
+export type CustomPolicyDocument = {
+    principalId: string,
+        policyDocument: {
+            Statement: Statement[]
+        }
+}
+
+type Statement = {
+    Action: string,
+    Effect: string,
+    Resource: string
+}
+
 export default ({ effect, resource, userId="WISHLY.PAYMENT.API" }: {
     userId?: string
     effect: string
     resource: string
-}) => {
+}): CustomPolicyDocument => {
     const policy = {
         principalId: userId,
         policyDocument: {
