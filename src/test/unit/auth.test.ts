@@ -1,5 +1,6 @@
 import { it, jest, expect, beforeEach, describe } from '@jest/globals'
 import buildIAMPolicy from '../../app/auth/lib/util'
+import { policyMock } from './mocks/policy.mock'
 
 
 describe('Auth', () => {
@@ -8,7 +9,22 @@ describe('Auth', () => {
             effect: "Allow",
             resource: ""
         })
-        const expected = {"principalId":"WISHLY.PAYMENT.API","policyDocument":{"Statement":[{"Action":"execute-api:Invoke","Effect":"Allow","Resource":""}]}}
+        const expected = policyMock
+
+        expect(JSON.stringify(result)).toBe(JSON.stringify(expected))
+    }) 
+
+    it('should use passed id', () => {
+        const userId = "WISHLY-APP"
+        
+        const result = buildIAMPolicy({
+            effect: "Allow",
+            resource: "",
+            userId
+        })
+        const expected = policyMock
+
+        expected.principalId = userId
 
         expect(JSON.stringify(result)).toBe(JSON.stringify(expected))
     }) 
