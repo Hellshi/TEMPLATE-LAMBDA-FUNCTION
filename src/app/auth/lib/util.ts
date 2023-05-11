@@ -11,7 +11,7 @@ type Statement = {
     Resource: string
 }
 
-export default ({ effect, resource, userId="WISHLY.PAYMENT.API" }: {
+export default ({ effect, resource, userId="WISHLY.PAYMENT.API"}: {
     userId?: string
     effect: string
     resource: string
