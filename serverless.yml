@@ -16,7 +16,7 @@ plugins:
 
 functions:
   authorizerFunc:
-    handler: src/auth/authorizer.handler
+    handler: src/app/auth/authorizer.handler
 
   splitPayment:
     handler: src/app/index.handler

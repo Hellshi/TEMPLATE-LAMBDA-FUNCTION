@@ -1,5 +1,5 @@
 // TODO: move to layers should be the last thing you will do
-module.exports.handler = async (event) => {
+export const handler = async (event) => {
     return {
       statusCode: 200,
       body: JSON.stringify(
