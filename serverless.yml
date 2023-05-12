@@ -5,7 +5,7 @@ provider:
   name: aws
   runtime: nodejs16.x
   layers:
-    - arn:aws:lambda:us-east-1:243886104914:layer:PrivateModules:2	
+    - arn:aws:lambda:us-east-1:243886104914:layer:PrivateModules:3		
 
 package:
   excludeDevDependencies: true
@@ -33,6 +33,5 @@ functions:
             headers:
               - Content-Type
               - Authorization
-
-#    layers:  
-# TODO: add layers here at the end
+    layers:
+      - arn:aws:lambda:us-east-1:243886104914:layer:PrivateModules:3

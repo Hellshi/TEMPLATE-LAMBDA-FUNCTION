@@ -1,0 +1,13 @@
+service: private-modules
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs16.x
+
+layers:
+  PrivateModules:
+    path: layer
+    compatibleRuntimes:
+      - nodejs16.x
