@@ -1,6 +1,5 @@
 //@ts-ignore
 import * as moment from 'moment';
-// TODO: move to layers should be the last thing you will do
 export const handler = async (event) => {
     return {
       statusCode: 200,

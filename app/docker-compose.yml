@@ -26,5 +26,19 @@ services:
       AWS_ACCESS_KEY_ID: test
       AWS_SECRET_ACCESS_KEY: test
 
+  test:
+    build: .
+    command: npm run test:docker
+    volumes:
+      - .:/src
+      - nodemodules:/src/node_modules
+    restart: on-failure
+    depends_on:
+      - localstack
+    environment:
+      LOCALSTACK_HOST: localstack
+      AWS_ACCESS_KEY_ID: test
+      AWS_SECRET_ACCESS_KEY: test
+
 volumes:
   nodemodules: {}
