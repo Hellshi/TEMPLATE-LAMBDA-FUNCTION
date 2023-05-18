@@ -1972,7 +1972,7 @@ acorn@^8.4.1:
   resolved "https://registry.npmjs.org/acorn/-/acorn-8.8.2.tgz"
   integrity sha512-xjIYgE8HBrkpd/sJqOGNspf8uHG+NOHGOw6a/Urj8taM2EXfdNAH2oFcPeIFfsv3+kz/mJrS5VuMqbNLjCa2vw==
 
-adm-zip@^0.5.5:
+adm-zip@^0.5.10, adm-zip@^0.5.5:
   version "0.5.10"
   resolved "https://registry.npmjs.org/adm-zip/-/adm-zip-0.5.10.tgz"
   integrity sha512-x0HvcHqVJNTPk/Bw8JbLWlWoo6Wwnsug0fnYYro1HBrjxZ3G7/AZk7Ahv8JwDe1uIcz8eBqvu86FuF1POiG7vQ==
@@ -2197,6 +2197,22 @@ aws-sdk@^2.1352.0, aws-sdk@^2.814.0:
   version "2.1376.0"
   resolved "https://registry.npmjs.org/aws-sdk/-/aws-sdk-2.1376.0.tgz"
   integrity sha512-ja/Xnft8BDcDEz786VJFPrWpuWpOgsA+QzBAwzsjYeIolQ/vEs/bbXkoS085fOoeAPEhYWQh9wog7cVvrQPJFQ==
+  dependencies:
+    buffer "4.9.2"
+    events "1.1.1"
+    ieee754 "1.1.13"
+    jmespath "0.16.0"
+    querystring "0.2.0"
+    sax "1.2.1"
+    url "0.10.3"
+    util "^0.12.4"
+    uuid "8.0.0"
+    xml2js "0.5.0"
+
+aws-sdk@^2.402.0:
+  version "2.1379.0"
+  resolved "https://registry.yarnpkg.com/aws-sdk/-/aws-sdk-2.1379.0.tgz#2d5609a37287d25edda4395fbb89306939f98890"
+  integrity sha512-kziOtAtJxdgYJwhzY+uhNi/AGPrDEMHd0dEz46YR1AB5bVqjS9/SjOZHemB88QfpW11IVB/FoiIusXlGEvgq9Q==
   dependencies:
     buffer "4.9.2"
     events "1.1.1"
@@ -3182,7 +3198,7 @@ es6-iterator@^2.0.3, es6-iterator@~2.0.3:
     es5-ext "^0.10.35"
     es6-symbol "^3.1.1"
 
-es6-promisify@^6.0.0:
+es6-promisify@^6.0.0, es6-promisify@^6.0.1:
   version "6.1.1"
   resolved "https://registry.yarnpkg.com/es6-promisify/-/es6-promisify-6.1.1.tgz#46837651b7b06bf6fff893d03f29393668d01621"
   integrity sha512-HBL8I3mIki5C1Cc9QjKUenHtnG0A5/xA8Q/AllRcfiwl2CZFXGK7ddBiCoRwAix4i2KxcQfjtIVcrVbB3vbmwg==
@@ -5888,6 +5904,15 @@ serverless-layers@^2.6.1:
     mkdirp "^0.5.6"
     semver "^7.3.2"
     slugify "^1.4.0"
+
+serverless-localstack@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/serverless-localstack/-/serverless-localstack-1.1.1.tgz#feb3768d1758ea7abe1fb34b833fe1c69745ea5d"
+  integrity sha512-Oq6lYBjJhYqYkHpY3Tk53t4/iO+h61yAat9sSVuTVoVrpt5Ah3EjDsEnBDhj4xEdKVrIiFxIQLuzLx8/qTeVvw==
+  dependencies:
+    adm-zip "^0.5.10"
+    aws-sdk "^2.402.0"
+    es6-promisify "^6.0.1"
 
 serverless-offline@^12.0.4:
   version "12.0.4"

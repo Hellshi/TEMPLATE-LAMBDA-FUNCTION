@@ -14,6 +14,7 @@ package:
     - src/test
 
 plugins:
+  - serverless-localstack
   - serverless-plugin-typescript
   - serverless-offline
   - serverless-layers
