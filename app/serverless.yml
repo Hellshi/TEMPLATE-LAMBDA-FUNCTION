@@ -4,9 +4,9 @@ frameworkVersion: '3'
 provider:
   name: aws
   runtime: nodejs16.x
+  lambdaHashingVersion: 20201221
   deploymentBucket:
-    name: serverless-${sls:stage}-test-deployment
-    serverSideEncryption: AES256
+    name: serverless-test-deployment
 
 package:
   excludeDevDependencies: true
@@ -26,6 +26,11 @@ custom:
     functions: # optional
       - splitPayment
     dependenciesPath: ./layer/nodejs/package.json
+  localstack:
+    stages:
+      - local
+      - host: http://localhost
+      - edgePort: 4566
 
 functions:
   authorizerFunc:

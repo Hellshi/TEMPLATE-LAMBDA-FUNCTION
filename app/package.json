@@ -7,7 +7,8 @@
     "test": "NODE_OPTIONS=--experimental-vm-modules  npx jest --runInBand --watch --config ./jest.config.ts",
     "test:docker": "NODE_OPTIONS=--experimental-vm-modules  npx jest --runInBand --watchAll --config ./jest.config.ts",
     "test:cov": "NODE_OPTIONS=--experimental-vm-modules npx jest --config ./jest.config.ts --coverage --detectOpenHandles",
-    "local": "npx nodemon --exec sls offline start --host 0.0.0.0"
+    "local": "npx nodemon --exec sls offline start --host 0.0.0.0",
+    "deploy:local": "npx sls deploy --stage local --verbose"
   },
   "keywords": [],
   "author": "",

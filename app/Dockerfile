@@ -10,4 +10,4 @@ COPY . .
 
 RUN yarn serverless plugin install -n serverless-localstack
 
-CMD npm run local
+CMD npm run deploy:local
